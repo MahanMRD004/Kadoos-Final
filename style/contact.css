@@ -1,0 +1,117 @@
+main {
+    padding: 20px 2.2rem;
+}
+
+.row {
+    max-width: 1065px;
+    margin: auto;
+}
+
+.row .contactCard {
+    position: relative;
+    height: 340px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #121213;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.row .contactCard::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #ff4d65;
+    top: -3px;
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.row .contactCard#bigger::after {
+    background: #0dcaf0;
+}
+
+.row .contactCard#about::after {
+    background: #198754;
+}
+
+.contactCard#bigger {
+    height: 400px;
+}
+
+.contactCard .title {
+    flex-direction: column;
+    color: #fdfdfd;
+}
+
+.contactCard .title h6 {
+    color: #ff4d65;
+}
+
+.contactCard#bigger .title h6 {
+    color: #0dcaf0;
+}
+
+.contactCard#about .title h6 {
+    color: #198754;
+}
+
+main .contact {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+main .contact h6 {
+    margin: 0;
+}
+
+.contact .social {
+    height: 100%;
+    width: fit-content;
+}
+
+.social ul {
+    height: 100%;
+    width: fit-content;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.social li {
+    aspect-ratio: 1;
+    width: 35px;
+    cursor: pointer;
+}
+
+footer {
+    transition: 0.5s ease;
+}
+
+@media (max-width:690.5px) {
+    .row .contactCard {
+        height: 150px;
+    }
+    .contactCard#bigger {
+        height: 150px;
+    }
+}
+
+@media (max-width:584px) {
+    main .title {
+        justify-content: center;
+    }
+
+    main .contact h6 {
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,116 @@
+body {
+    overflow: hidden;
+}
+
+.fluid-container {
+    height: 100%;
+    overflow: hidden;
+}
+
+main {
+    height: 100%;
+    padding: 0;
+}
+
+main.deactive {
+    height: 100%;
+    left: unset;
+    bottom: unset;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content {
+    height: fit-content;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: #141316;
+    border-radius: 10px;
+    padding: 65px 35px;
+    overflow: hidden;
+    color: #fdfdfd;
+    margin-bottom: 100px;
+}
+
+.content .title {
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.content .title h2 {
+    color: #ff4d65;
+    font-size: 2rem;
+}
+
+.content .title p {
+    font-size: 1.2rem;
+}
+
+.content .email {
+    position: relative;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.content .email input {
+    border: 2px solid#ff4d65;
+    outline: none;
+    height: 50%;
+    width: 100%;
+    background: transparent;
+    border-radius: 8px;
+    color: #fdfdfd;
+    padding: 0 35px;
+    direction: ltr;
+}
+
+.content .email button {
+    border: none;
+    outline: none;
+    height: 50%;
+    width: 100%;
+    background: #ff4d65;
+    border-radius: 8px;
+    color: #fdfdfd;
+}
+
+.content .email button:hover {
+    background: #c53548;
+}
+
+.content .success {
+    position: absolute;
+    border-radius: 8px;
+    justify-content: center;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.content a {
+    text-decoration: none;
+    color: #fdfdfd;
+}
+
+.content a:hover {
+    color: #c5c5c5;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    transition: 0.5s ease;
+}
