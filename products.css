@@ -75,13 +75,12 @@
     .caption .info {
         display: none;
     }
-}
-
-@media (min-width:768px) {
     .categories {
         padding-inline: 0.8rem;
     }
+}
 
+@media (min-width:768px) {
     .caption {
         transform: translateY(80%);
         transition: 0.5s ease-in-out;
