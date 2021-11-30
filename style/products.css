@@ -72,12 +72,11 @@
 }
 
 @media (max-width:768px) {
-    .categories {
-        padding-inline: 0.9rem;
-    }
-    
     .caption .info {
         display: none;
+    }
+    .categories {
+        padding-inline: 0.8rem;
     }
 }
 

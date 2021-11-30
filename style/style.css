@@ -319,6 +319,7 @@ main .offers {
 .container .bestSale .card {
     position: relative;
     aspect-ratio: 1;
+    min-width: 150px;
     max-width: 320px;
     overflow: hidden;
     border: 1px solid #1d1d1d1f;
@@ -407,7 +408,7 @@ footer {
 }
 
 footer.deactive {
-    transform: translateX(-100%);
+    display: none;
 }
 
 footer small {
