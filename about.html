@@ -21,24 +21,29 @@
         </div>
         <div class="text">Loading</div>
     </div>
-    <div class="fluid-container disable">
+    <div class="fluid-container ">
         <header>
             <div class="logo">نام شرکت</div>
             <nav>
                 <ul class="navigation">
-                    <li><a href="index.html" class="navItem">خانه</a></li>
-                    <li><a href="products.html" class="navItem">محصولات</a></li>
-                    <li><a href="about.html" class="navItem active">درباره ما</a></li>
-                    <li><a href="contact.html" class="navItem">راه های ارتباطی</a></li>
-                    <li class="icon" id="searchBtn">
-                        <ion-icon id="searchIcon" name="search"></ion-icon>
-                    </li>
-                    <li class="icon">
-                        <ion-icon name="cart"></ion-icon>
-                    </li>
+                  <li><a href="index.html" class="removable navItem">خانه</a></li>
+                 <li><a href="products.html" class="removable navItem">محصولات</a></li>
+                        <li><a href="about.html" class="removable navItem active">درباره ما</a></li>
+                        <li><a href="contact.html" class="removable navItem">راه های ارتباطی</a></li>
+                    <li class="icon" id="searchBtn"><ion-icon id="searchIcon" name="search"></ion-icon></li>
+                    <li class="icon"><ion-icon name="cart"></ion-icon></li>
+                    <li class="icon" id="toggleSidebar"><ion-icon name="menu-outline"></ion-icon></li>
                 </ul>
             </nav>
         </header>
+        <nav class="sideBar">
+            <ul class="sideNavigation">
+                <li><a href="index.html" class="navItem">خانه</a></li>
+                <li><a href="products.html" class="navItem">محصولات</a></li>
+                <li><a href="about.html" class="navItem active">درباره ما</a></li>
+                <li><a href="contact.html" class="navItem">راه های ارتباطی</a></li>
+            </ul>
+        </nav>
         <div class="searchBox">
             <div class="search">
                 <input type="text" placeholder="جستجو...">
@@ -54,48 +59,38 @@
             </div>
             <div class="about">
                 <h4>به "نام شرکت" خوش آمدید</h4>
-                <small>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-                    نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</small>
+                <small>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</small>
             </div>
-            <div class="offers">
-                <div class="slide">
-                    <div class="servicesBox">
-                        <div class="options">
-                            <ion-icon name="time-outline"></ion-icon>
-                            <h4>پشتیبانی 24 ساعته</h4>
-                        </div>
-                        <div class="options">
-                            <ion-icon name="cash-outline"></ion-icon>
-                            <h4>تضمین بهترین قیمت</h4>
-                        </div>
-                        <div class="options">
-                            <ion-icon name="bag-handle-outline"></ion-icon>
-                            <h4>تحویل فوری</h4>
-                        </div>
-                    </div>
+            <div class="servicesBox">
+                <div class="options">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <h4>پشتیبانی 24 ساعته</h4>
                 </div>
-                <div class="slide active">
-                    <div class="servicesBox">
-                        <div class="options">
-                            <ion-icon name="star-outline"></ion-icon>
-                            <h4>تضمین اصالت کالا</h4>
-                        </div>
-                        <div class="options">
-                            <ion-icon name="refresh-outline"></ion-icon>
-                            <h4>پس گرفتن کالا تا 10 روز</h4>
-                        </div>
-                        <div class="options">
-                            <ion-icon name="planet-outline"></ion-icon>
-                            <h4>دارای نمایندگی در سرارسر کشور</h4>
-                        </div>
-                    </div>
+                <div class="options">
+                    <ion-icon name="cash-outline"></ion-icon>
+                    <h4>تضمین بهترین قیمت</h4>
+                </div>
+                <div class="options">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                    <h4>تحویل فوری</h4>
+                </div>
+                <div class="options">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <h4>تضمین اصالت کالا</h4>
+                </div>
+                <div class="options">
+                    <ion-icon name="refresh-outline"></ion-icon>
+                    <h4>پس گرفتن کالا تا 10 روز</h4>
+                </div>
+                <div class="options">
+                    <ion-icon name="planet-outline"></ion-icon>
+                    <h4>دارای نمایندگی در سرارسر کشور</h4>
                 </div>
             </div>
+            <footer>
+                <small>&copy; 2021 By MahanMRD All rights reserved</small>
+            </footer>
         </main>
-        <footer>
-            <small>&copy; 2021 By MahanMRD All rights reserved</small>
-        </footer>
     </div>
     <script src="js/jQuery.js"></script>
     <script src="js/general.js"></script>
