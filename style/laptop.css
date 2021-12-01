@@ -149,8 +149,6 @@ main {
 }
 
 .selectColor {
-    position: relative;
-    height: 100%;
     display: none;
 }
 
