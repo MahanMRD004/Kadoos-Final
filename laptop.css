@@ -1,0 +1,109 @@
+main {
+    height: calc(100% - 50px);
+    width: 100%;
+    overflow-y: auto;
+}
+
+.product {
+    width: 100%;
+    margin: auto;
+    padding: 1rem 1.5rem;
+}
+
+.product > div {
+    max-height: 510px;
+    padding: 1rem 1.5rem;
+    background: #121213;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fdfdfd;
+}
+
+.productImage  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productImage .thumbnail {
+    aspect-ratio: 1;
+    width: clamp(150px,90%,350px);
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+    background: #ffffff;
+}
+
+.productImage .buttons {
+    height: clamp(45px,25%,65px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+    margin: 0.625rem 0 auto;
+}
+
+.buttons .imgBox {
+    aspect-ratio: 1;
+    height: auto;
+    width: 100%;
+    max-width: 75px;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.productInfo ul {
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: auto;
+    overflow-y: auto;
+}
+
+.productInfo ul::-webkit-scrollbar-track {background: #ff4d6525; border-radius: 25px;}
+.productInfo ul::-webkit-scrollbar-thumb {background: #ff4d65; border-radius: 25px;}
+
+.productInfo ul li h4 {
+    font-size: 1.2rem;
+    color: #ff4d65;
+}
+
+.productInfo ul li {
+    font-size: 0.8rem;
+    border-bottom: 1px solid #ff4d6525;
+    padding: 0.8rem;;
+}
+
+.productInfo ul li span {
+    font-size: 1rem;
+    color: #ff4d6585;
+}
+
+.productInfo ul li span::after {
+    content: " : ";
+}
+
+.addToCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productPrice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productPrice h4 {
+    color: #ff4d65;
+}
+
+.productPrice sub {
+    text-decoration: line-through;
+}
