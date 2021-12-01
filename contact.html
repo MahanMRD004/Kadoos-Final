@@ -18,20 +18,29 @@
         </div>
         <div class="text">Loading</div>
     </div>
-    <div class="fluid-container disable">
+    <div class="fluid-container ">
         <header>
             <div class="logo">نام شرکت</div>
             <nav>
                 <ul class="navigation">
-                    <li><a href="index.html" class="navItem">خانه</a></li>
-                    <li><a href="products.html" class="navItem">محصولات</a></li>
-                    <li><a href="about.html" class="navItem">درباره ما</a></li>
-                    <li><a href="contact.html" class="navItem active">راه های ارتباطی</a></li>
+                  <li><a href="index.html" class="removable navItem">خانه</a></li>
+                 <li><a href="products.html" class="removable navItem">محصولات</a></li>
+                        <li><a href="about.html" class="removable navItem">درباره ما</a></li>
+                        <li><a href="contact.html" class="removable navItem active">راه های ارتباطی</a></li>
                     <li class="icon" id="searchBtn"><ion-icon id="searchIcon" name="search"></ion-icon></li>
                     <li class="icon"><ion-icon name="cart"></ion-icon></li>
+                    <li class="icon" id="toggleSidebar"><ion-icon name="menu-outline"></ion-icon></li>
                 </ul>
             </nav>
         </header>
+        <nav class="sideBar">
+            <ul class="sideNavigation">
+                <li><a href="index.html" class="navItem">خانه</a></li>
+                <li><a href="products.html" class="navItem">محصولات</a></li>
+                <li><a href="about.html" class="navItem">درباره ما</a></li>
+                <li><a href="contact.html" class="navItem active">راه های ارتباطی</a></li>
+            </ul>
+        </nav>
         <div class="searchBox">
             <div class="search">
                 <input type="text" placeholder="جستجو...">
@@ -79,10 +88,10 @@
                     </div>
                 </div>
             </div>
+            <footer>
+                <small>&copy; 2021 By MahanMRD All rights reserved</small>
+            </footer>
         </main>
-        <footer>
-            <small>&copy; 2021 By MahanMRD All rights reserved</small>
-        </footer>
     </div>
     <script src="js/jQuery.js"></script>
     <script src="js/general.js"></script>
