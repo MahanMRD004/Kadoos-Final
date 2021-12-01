@@ -6,6 +6,15 @@ $(document).ready(function() {
   }, 3500);
 });
 
+//Side Bar
+
+const toggleSideBar = document.getElementById("toggleSidebar")
+const sideBar = document.querySelector(".sideBar")
+
+toggleSideBar.addEventListener("click",function() {
+  $(sideBar).toggleClass("active")
+})
+
 // Search
 
 const searchButton = document.getElementById("searchBtn");
@@ -22,7 +31,4 @@ function showSearch() {
     $(searchIcon).attr("name","search")
   }
   $(searchBox).toggleClass('active');
-  $("main").toggleClass('deactive');
-  $("footer").toggleClass('deactive');
-  $("header").toggleClass('move')
 }
