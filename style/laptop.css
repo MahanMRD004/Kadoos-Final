@@ -1,5 +1,5 @@
 main {
-    height: 100%;
+    height: calc(100% - 50px);
     width: 100%;
     overflow-y: auto;
 }
@@ -8,7 +8,6 @@ main {
     width: 100%;
     margin: auto;
     padding: 1rem 1.5rem;
-    justify-content: center;
 }
 
 .product > div {
@@ -54,6 +53,10 @@ main {
     border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
+}
+
+.buttons .imgBox img {
+    pointer-events: none;
 }
 
 .productInfo ul {
