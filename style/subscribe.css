@@ -1,22 +1,3 @@
-body {
-    overflow: hidden;
-}
-
-.fluid-container {
-    height: 100%;
-    overflow: hidden;
-}
-
-main {
-    height: 100%;
-    padding: 0;
-}
-
-main.deactive {
-    height: 100%;
-    left: unset;
-    bottom: unset;
-}
 .container {
     height: 100%;
     width: 100%;
@@ -48,16 +29,16 @@ main.deactive {
 
 .content .title h2 {
     color: #ff4d65;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .content .title p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .content .email {
     position: relative;
-    height: 80px;
+    height: 65px;
     width: 100%;
     display: flex;
     flex-direction: column;

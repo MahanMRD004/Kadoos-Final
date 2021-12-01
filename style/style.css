@@ -2,23 +2,29 @@
 
 /* General Setup */
 
+:root {
+    overflow: hidden;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     font-family: 'Noto Sans Arabic', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
     background: #0d0d0d;
 }
 
-.fluid-container.disable {
+.fluid-container {
+    position: relative;
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
+
 
 .imgBox {
     height: 100%;
@@ -119,6 +125,10 @@ header .logo {
     color: #fdfdfd;
 }
 
+header #toggleSidebar {
+    display: none;
+}
+
 
 header nav {
     height: 50px;
@@ -133,7 +143,7 @@ header .navigation {
     gap: 0.7rem;
 }
 
-header .navigation .navItem {
+.navItem {
     position: relative;
     height: 50px;
     display: grid;
@@ -143,11 +153,11 @@ header .navigation .navItem {
     color: #fdfdfd;
 }
 
-header .navigation .navItem:hover {
+.navItem:hover {
     color: #ff4d65;
 }
 
-header .navigation .navItem.active::after {
+.navItem.active::after {
     content: '';
     position: absolute;
     height: 4px;
@@ -157,7 +167,7 @@ header .navigation .navItem.active::after {
     border-radius: 100px 100px 0 0;
 }
 
-nav .icon {
+header .icon {
     aspect-ratio: 1;
     width: 35px;
     display: grid;
@@ -171,10 +181,62 @@ nav .icon {
     outline-offset: -15px;
 }
 
-nav .icon:hover {
+header  .icon:hover {
     outline: 1px solid #ff4d65;
     outline-offset: 0px;
 }
+
+/* Side Bar  */
+
+.sideBar {
+    position: absolute;
+    height: calc(100% - 47px);
+    width: calc(120px + 10vw);
+    background: #1d1d1d;
+    box-shadow: 5px 0 15px #00000085;
+    z-index: 99;
+    bottom: 0;
+    left: -100vw;
+    padding-top: 1.2rem;
+    transition: 0.3s ease-in-out;
+    display: none;
+}
+
+.sideBar.active {
+    left: 0;
+}
+
+.sideBar .sideNavigation {
+    list-style: none;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.sideNavigation li {
+    width: 100%;
+}
+
+.sideBar .navItem {
+    height: fit-content;
+    width: 100%;
+}
+
+.sideBar .navItem.active::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: #ff4d65;
+    left: 0;
+    border-radius: 0 100px 100px 0;
+}
+
 
 /* Search Box  */
 
@@ -189,13 +251,13 @@ nav .icon:hover {
     align-items: center;
     bottom: 0;
     left: 0;
-    transform: translateX(100%);
+    transform: translatey(-100vh);
     transition: 0.5s ease;
     z-index: 10;
 }
 
 .searchBox.active {
-    transform: translateX(0);
+    transform: translatey(0);
 }
 
 .searchBox .search {
@@ -208,7 +270,7 @@ nav .icon:hover {
     border: 2px solid #fdfdfd;
     outline: none;
     height: 35px;
-    width: 300px;
+    width: calc(100% - 45px);
     background: transparent;
     padding: 20px 20px;
     border-radius: 10px;
@@ -229,18 +291,15 @@ nav .icon:hover {
 /* Main */
 
 main {
-    padding-bottom: 1rem;
+    position: relative;
+    height: calc(100vh - 50px);
+    width: 100%;
     transition: 0.5s ease;
+    overflow-y: auto;
 }
 
 main.deactive {
-   position: absolute;
-   height: calc(100vh - 50px);
-   width: 100%;
-   left: 0;
-   bottom: 0;
-   overflow: hidden;
-   transform: translateX(-100%);
+   display: none;
 }
 
 
@@ -264,7 +323,7 @@ main .title {
 
 main .offers {
     position: relative;
-    height: 520px;
+    height: calc(220px + 20vw);
     width: 100%;
     margin-bottom: 1rem;
     overflow: hidden;
@@ -405,6 +464,7 @@ footer {
     justify-content: center;
     align-items: center;
     background: #121213;
+    margin-top: 1rem;
 }
 
 footer.deactive {
@@ -419,37 +479,6 @@ footer small {
 
 /* Responsive  */
 
-@media (max-width:530px) {
-    header {
-        height: 80px;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-
-    header .logo {
-        height: auto;
-        width: 100%;
-        display: grid;
-        place-content: center;
-    }
-
-    header .navigation .navItem {
-        font-size: 0.7rem;
-    }
-
-    nav .icon {
-        font-size: 1.2rem;
-    }
-
-    main {
-        padding: 1rem .4rem;
-    }
-
-    main.deactive {
-        height: calc(100vh - 80px);
-    }
-}
-
 @media (min-width:850px) {
     .container .bestSale .card .caption {
         transform: translateY(65%);
@@ -460,6 +489,12 @@ footer small {
     .container .bestSale .card:hover > .caption {
         transform: translateY(0);
      }
+}
+
+@media (max-width:768px) {
+    :root {
+        font-size: 14px;
+    }
 }
 
 
@@ -481,5 +516,42 @@ footer small {
         display: flex;
         justify-content: center;
         scroll-snap-align: center;
+    }
+}
+
+@media (max-width:500px) {
+
+    .sideBar {
+        display: block;
+    }
+
+    header #toggleSidebar {
+        display: grid;
+    }
+
+    header {
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 0.8rem;
+    }
+
+    header .removable {
+        display: none;
+    }
+}
+
+@media (max-width:450px) {
+:root {
+    font-size: 12px;
+}
+
+    .caption .info{
+        display: none;
+    }
+}
+
+@media (max-width:300px) {
+    :root {
+        font-size: 11px;
     }
 }
