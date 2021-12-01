@@ -191,20 +191,19 @@ header  .icon:hover {
 
 .sideBar {
     position: absolute;
-    height: calc(100% - 47px);
-    width: calc(120px + 10vw);
+    height: 50px;
+    width: 100%;
     background: #1d1d1d;
-    box-shadow: 5px 0 15px #00000085;
     z-index: 99;
-    bottom: 0;
-    left: -100vw;
-    padding-top: 1.2rem;
+    top: 50px;
+    left:0;
+    transform: translateY(-100%);
     transition: 0.3s ease-in-out;
     display: none;
 }
 
 .sideBar.active {
-    left: 0;
+    transform: translateY(0);
 }
 
 .sideBar .sideNavigation {
@@ -212,30 +211,20 @@ header  .icon:hover {
     height: fit-content;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     padding: 0;
-}
-
-.sideNavigation li {
-    width: 100%;
-}
-
-.sideBar .navItem {
-    height: fit-content;
-    width: 100%;
 }
 
 .sideBar .navItem.active::after {
     content: '';
     position: absolute;
-    height: 100%;
-    width: 4px;
+    height: 4px;
+    width: 100%;
     background: #ff4d65;
-    left: 0;
-    border-radius: 0 100px 100px 0;
+    bottom: 0;
+    border-radius: 100px 100px 0 0;
 }
 
 
