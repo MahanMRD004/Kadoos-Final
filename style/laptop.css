@@ -55,10 +55,6 @@ main {
     cursor: pointer;
 }
 
-.buttons .imgBox img {
-    pointer-events: none;
-}
-
 .productInfo ul {
     list-style: none;
     height: 100%;
