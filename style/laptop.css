@@ -175,6 +175,7 @@ main {
     aspect-ratio: 1;
     height: 100%;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .colorsContainer .color.selected {
