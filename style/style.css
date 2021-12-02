@@ -54,6 +54,8 @@ img {
     background: #1d1d1d;
     z-index: 1000;
     transition: 0.5s ease ;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .loading.loaded {
@@ -64,6 +66,7 @@ img {
 .loading > div {
     position: absolute;
     height: 65%;
+    max-height: 350px;
     width: 450px;
     max-width: 90%;
     display: flex;
@@ -87,8 +90,9 @@ img {
 
 .loading .text {
     height: 63%;
-    width: 440px;
-    max-width: 90%;
+    max-height: 340px;
+    width: 445px;
+    max-width: 87%;
     font-size: 2.5rem;
     text-transform: uppercase;
     color: #fdfdfd;
@@ -340,6 +344,7 @@ main .offers {
 /* Best Sale Section  */
 
 .container .bestSale {
+    position: relative;
     border-radius: 0.3rem;
     padding: 1.2rem 2.2rem;
     margin-bottom: 2rem;
@@ -361,6 +366,7 @@ main .offers {
 }
 
 .bestSale .cardContainer {
+    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -415,6 +421,14 @@ main .offers {
 
 .caption p {
     font-size: 0.8rem;
+}
+
+.cardContainer .arrows {
+    position: absolute;
+    height: 100%;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* About Us Section  */
@@ -485,6 +499,10 @@ footer small {
     :root {
         font-size: 14px;
     }
+
+    main .offers {
+        height: calc(180px + 20vw);
+    }
 }
 
 
@@ -503,10 +521,28 @@ footer small {
     .cardContainer::-webkit-scrollbar-thumb {border-radius: 25px;}
 
     .container .bestSale .cardBox {
+        position: relative;
+        width: 100%;
         display: flex;
         justify-content: center;
         scroll-snap-align: center;
+        margin: 1rem;
     }
+
+    .container .bestSale .arrows::before,
+    .container .bestSale .arrows::after {
+        content: ">";
+        position: absolute;
+        color: #ff4d65;
+        font-size: 1.5rem;
+        left: 0.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }  
+    .container .bestSale .arrows::after {
+        content: "<";
+        right: 0.8rem;
+    }   
 }
 
 @media (max-width:500px) {
@@ -528,6 +564,10 @@ footer small {
     header .removable {
         display: none;
     }
+
+    main .offers {
+        height: calc(130px + 20vw);
+    }
 }
 
 @media (max-width:450px) {
@@ -543,5 +583,9 @@ footer small {
 @media (max-width:300px) {
     :root {
         font-size: 11px;
+    }
+
+    main .offers {
+        height: calc(100px + 20vw);
     }
 }
