@@ -69,10 +69,6 @@
     color: #fdfdfd;
 }
 
-.content .email button:hover {
-    background: #c53548;
-}
-
 .content .success {
     position: absolute;
     border-radius: 8px;
@@ -86,12 +82,18 @@
     color: #fdfdfd;
 }
 
-.content a:hover {
-    color: #c5c5c5;
-}
-
 footer {
     position: absolute;
     bottom: 0;
     transition: 0.5s ease;
+}
+
+@media (min-width:768px) {
+    .content .email button:hover {
+        background: #c53548;
+    }
+
+    .content a:hover {
+        color: #c5c5c5;
+    }
 }

@@ -65,14 +65,13 @@ img {
 
 .loading > div {
     position: absolute;
-    height: 65%;
-    max-height: 350px;
-    width: 450px;
-    max-width: 90%;
+    aspect-ratio: 1;
+    width: 95%;
+    max-width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 50%;
 }
 
 .loading .background {
@@ -82,17 +81,16 @@ img {
 
 .loading .background .reg {
     height: 200%;
-    width: 100%;
+    width: 200%;
     background: linear-gradient(red,blue);
-    transform: rotate(0);
+    transform: rotate(315deg);
     animation: loading 3s ease;
 }
 
 .loading .text {
-    height: 63%;
-    max-height: 340px;
-    width: 445px;
-    max-width: 87%;
+    aspect-ratio: 1;
+    width: 93%;
+    max-width: 490px;
     font-size: 2.5rem;
     text-transform: uppercase;
     color: #fdfdfd;
@@ -100,8 +98,8 @@ img {
 }
 
 @keyframes loading {
-    0% { transform: rotate(0); width: 65px;}
-    100% { transform: rotate(359deg); width: 100%; }
+    0% { transform: rotate(0); width: 0;}
+    100% { transform: rotate(314deg); width: 100%;}
 }
 
 /* Header */
@@ -158,9 +156,7 @@ header .navigation {
     color: #fdfdfd;
 }
 
-.navItem:hover {
-    color: #ff4d65;
-}
+
 
 .navItem.active::after {
     content: '';
@@ -186,10 +182,6 @@ header .icon {
     outline-offset: -15px;
 }
 
-header  .icon:hover {
-    outline: 1px solid #ff4d65;
-    outline-offset: 0px;
-}
 
 /* Side Bar  */
 
@@ -361,10 +353,6 @@ main .offers {
     color: #ff4d65;
 }
 
-.container .bestSale a:hover {
-    color: #af2e3f;
-}
-
 .bestSale .cardContainer {
     position: relative;
     display: flex;
@@ -528,8 +516,8 @@ footer small {
         margin: 1rem;
     }
 
-    .container .bestSale .arrows::before,
-    .container .bestSale .arrows::after {
+    .container .bestSale .arrows #right,
+    .container .bestSale .arrows #left {
         content: ">";
         position: absolute;
         color: #ff4d65;
@@ -537,8 +525,9 @@ footer small {
         left: 0.8rem;
         top: 50%;
         transform: translateY(-50%);
+        cursor: pointer;
     }  
-    .container .bestSale .arrows::after {
+    .container .bestSale .arrows #left {
         content: "<";
         right: 0.8rem;
     }   
@@ -586,5 +575,23 @@ footer small {
 
     main .offers {
         height: calc(100px + 20vw);
+    }
+}
+
+/* Hover Effects */
+
+@media (min-width:768px) {
+
+    header  .icon:hover {
+        outline: 1px solid #ff4d65;
+        outline-offset: 0px;
+    }
+
+    .navItem:hover {
+        color: #ff4d65;
+    }
+
+    .container .bestSale a:hover {
+        color: #af2e3f;
     }
 }
