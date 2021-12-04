@@ -418,6 +418,7 @@ main .offers {
     top: 57%;
     left: 50%;
     transform: translate(-50%);
+    display: none;
 }
 
 /* About Us Section  */
@@ -515,6 +516,10 @@ footer small {
         justify-content: center;
         scroll-snap-align: center;
         margin: 1rem;
+    }
+
+    .arrows {
+        display: block;
     }
 
     .container .bestSale .arrows #right,
