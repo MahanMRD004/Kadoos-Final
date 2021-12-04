@@ -161,7 +161,7 @@ main {
 }
 
 .selectColor .colorsContainer {
-    height: 35px;
+    height: fit-content;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -172,7 +172,7 @@ main {
 
 .colorsContainer .color {
     aspect-ratio: 1;
-    height: 100%;
+    height: 35px;
     border-radius: 50%;
     cursor: pointer;
 }
