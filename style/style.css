@@ -505,8 +505,8 @@ footer small {
         scroll-snap-type: x mandatory;
     }
 
-    .cardContainer::-webkit-scrollbar-track {border-radius: 25px;}
-    .cardContainer::-webkit-scrollbar-thumb {border-radius: 25px;}
+    .cardContainer::-webkit-scrollbar-track {border-radius: 25px; background: #ff4d6545;}
+    .cardContainer::-webkit-scrollbar-thumb {border-radius: 25px; background: #ff4d65;}
 
     .container .bestSale .cardBox {
         position: relative;
