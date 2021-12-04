@@ -37,8 +37,8 @@ img {
     object-fit: cover;
 }
 
-::-webkit-scrollbar {height: 4px; width: 5px;}
-::-webkit-scrollbar-track {background: #9b9b9b; }
+::-webkit-scrollbar {height: 5px; width: 4px;}
+::-webkit-scrollbar-track {background: #9b9b9b83; }
 ::-webkit-scrollbar-thumb {background: #1d1d1d; }
 
 /* Loading */
@@ -411,12 +411,13 @@ main .offers {
     font-size: 0.8rem;
 }
 
-.cardContainer .arrows {
+.arrows {
     position: absolute;
-    height: 100%;
+    height: fit-content;
     width: 95%;
+    top: 57%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%);
 }
 
 /* About Us Section  */
@@ -504,8 +505,8 @@ footer small {
         scroll-snap-type: x mandatory;
     }
 
-    .cardContainer::-webkit-scrollbar-track {border-radius: 25px;}
-    .cardContainer::-webkit-scrollbar-thumb {border-radius: 25px;}
+    .cardContainer::-webkit-scrollbar-track {border-radius: 25px; background: #ff4d6545;}
+    .cardContainer::-webkit-scrollbar-thumb {border-radius: 25px; background: #ff4d65;}
 
     .container .bestSale .cardBox {
         position: relative;
@@ -518,17 +519,21 @@ footer small {
 
     .container .bestSale .arrows #right,
     .container .bestSale .arrows #left {
-        content: ">";
         position: absolute;
-        color: #ff4d65;
+        height: 2rem;
+        width: 2rem;
+        display: grid;
+        place-content: center;
+        background: #ff4d65;
+        color: #000000;
         font-size: 1.5rem;
         left: 0.8rem;
         top: 50%;
+        border-radius: 50%;
         transform: translateY(-50%);
         cursor: pointer;
     }  
-    .container .bestSale .arrows #left {
-        content: "<";
+    .container .bestSale .arrows #right {
         right: 0.8rem;
     }   
 }
@@ -586,12 +591,12 @@ footer small {
         outline: 1px solid #ff4d65;
         outline-offset: 0px;
     }
+}
 
-    .navItem:hover {
-        color: #ff4d65;
-    }
+.navItem:hover {
+    color: #ff4d65;
+}
 
-    .container .bestSale a:hover {
-        color: #af2e3f;
-    }
+.container .bestSale a:hover {
+    color: #af2e3f;
 }

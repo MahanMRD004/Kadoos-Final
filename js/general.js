@@ -32,3 +32,19 @@ function showSearch() {
   }
   $(searchBox).toggleClass('active');
 }
+
+const leftBtn = document.getElementById("left");
+const rightBtn = document.getElementById("right");
+
+$(leftBtn).click(function(){
+  var scrollValue = $(".cardContainer").scrollLeft() - 325;
+  $(".cardContainer").scrollLeft(scrollValue);
+});
+
+$(rightBtn).click(function(){
+  var scrollValue = $(".cardContainer").scrollLeft() + 325;
+  $(".cardContainer").scrollLeft(scrollValue);
+});
+
+
+
